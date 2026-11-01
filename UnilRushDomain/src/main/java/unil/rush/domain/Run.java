@@ -88,16 +88,6 @@ public class Run {
             status = RunStatus.LOST;
         }
     }
-    public static void main (String[] args)
-    {
-        Run r = new Run(UUID.randomUUID());
-        r.addWarning();
-        r.addWarning();
-        r.addWarning();
-        System.out.println(r.defeatCause);
-        System.out.println(r.status);
-        r.addWarning();
-    }
 
 
 
