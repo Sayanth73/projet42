@@ -75,10 +75,6 @@ public class Player {
         return (BCrypt.checkpw(password, this.passwordHash));
     }
     // probablement à supprimer plus tard juste utile pour les tests et voir comment marcher Bcyrpt
-    public String getPasswordHash()
-    {
-        return (this.passwordHash);
-    }
 
     @Override
     public String toString()
