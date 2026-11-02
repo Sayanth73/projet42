@@ -68,6 +68,15 @@ public class RunTest {
         assertEquals(l.getDefeatCause(),null);
         assertEquals(l.getStatus(),RunStatus.IN_PROGRESS);
     }
+    @Test
+
+    void emptyRunCanBeStarted() {
+        Run l = new Run ();
+        l.setPlayerID(UUID.randomUUID());
+        l.start();
+        l.addWarning();
+        assertEquals(1, l.getWarnings());
 
 
+    }
 }

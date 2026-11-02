@@ -15,11 +15,7 @@ public class Run {
 
     public Run(UUID playerID) {
         setPlayerID(playerID);
-        day = 1;
-        warnings = 0;
-        score = 0;
-        status = IN_PROGRESS;
-        defeatCause = null;
+        start();
 
     }
     public Run()
@@ -87,6 +83,13 @@ public class Run {
             defeatCause = DefeatCause.EXPELLED;
             status = RunStatus.LOST;
         }
+    }
+    public void start() {
+        day = 1;
+        warnings = 0;
+        score = 0;
+        status = IN_PROGRESS;
+        defeatCause = null;
     }
 
 

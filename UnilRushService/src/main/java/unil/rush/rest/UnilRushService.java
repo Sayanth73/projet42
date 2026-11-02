@@ -5,4 +5,5 @@ import jakarta.ws.rs.ApplicationPath;
 
 @ApplicationPath("/api")
 public class UnilRushService extends Application {
+
 }
