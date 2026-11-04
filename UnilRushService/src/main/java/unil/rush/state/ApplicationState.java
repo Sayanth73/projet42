@@ -57,35 +57,34 @@ public class ApplicationState {
         return true;
     }
 
-    public  Run addRun(Run run)
-    {
-        if(run.getPlayerID() == null || !players.containsKey(run.getPlayerID()))
+    public Run addRun(Run run) {
+        if (run.getPlayerID() == null || !players.containsKey(run.getPlayerID()))
             return (null);
         UUID id = UUID.randomUUID();
-        while(runs.containsKey(id))
-            id =UUID.randomUUID();
+        while (runs.containsKey(id))
+            id = UUID.randomUUID();
         run.setRunID(id);
         run.start();
         runs.put(id, run);
         return (run);
     }
 
-    public Run getRun(UUID id)
-    {
-        return(runs.get(id));
+    public Run getRun(UUID id) {
+        return (runs.get(id));
     }
-    public List<Run> getAllRuns()
-    {
+
+    public List<Run> getAllRuns() {
         return new ArrayList<>(runs.values());
     }
+
     public boolean removeRun(UUID id) {
         if (!runs.containsKey(id))
             return (false);
         runs.remove(id);
         return (!(runs.containsKey(id)));
     }
-    public boolean updateRun(UUID id, Run changes)
-    {
+
+    public boolean updateRun(UUID id, Run changes) {
         Run test = runs.get(id);
 
         if (test == null)
@@ -96,12 +95,12 @@ public class ApplicationState {
             test.setDay((changes.getDay()));
         return true;
     }
-    public boolean addWarning(UUID id)
-    {
+
+    public boolean addWarning(UUID id) {
         Run test = runs.get(id);
-        if(test == null)
+        if (test == null)
             return (false);
         test.addWarning();
-        return(true);
+        return (true);
     }
 }
