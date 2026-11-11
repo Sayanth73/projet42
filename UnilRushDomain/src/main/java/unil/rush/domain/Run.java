@@ -2,6 +2,7 @@ package unil.rush.domain;
 
 import java.util.UUID;
 
+import static unil.rush.domain.RunStatus.ABANDONED;
 import static unil.rush.domain.RunStatus.IN_PROGRESS;
 
 public class Run {
@@ -18,64 +19,62 @@ public class Run {
         start();
 
     }
-    public Run()
-    {
+
+    public Run() {
 
     }
 
-    public int getScore()
-    {
+    public int getScore() {
         return score;
     }
-    public int getDay()
-    {
+
+    public int getDay() {
         return day;
     }
-    public int getWarnings()
-    {
+
+    public int getWarnings() {
         return warnings;
     }
-    public RunStatus getStatus()
-    {
+
+    public RunStatus getStatus() {
         return status;
     }
-    public DefeatCause getDefeatCause()
-    {
-        return(defeatCause);
+
+    public DefeatCause getDefeatCause() {
+        return (defeatCause);
     }
-    public UUID getRunID()
-    {
+
+    public UUID getRunID() {
         return (runID);
     }
-    public UUID getPlayerID()
-    {
-        return(playerID);
+
+    public UUID getPlayerID() {
+        return (playerID);
     }
-    public void setRunID(UUID runID)
-    {
+
+    public void setRunID(UUID runID) {
         this.runID = runID;
     }
-    public void setDay(int day)
-    {
+
+    public void setDay(int day) {
         if (day < 1)
             throw new IllegalArgumentException("Day must start at 1");
         this.day = day;
     }
-    public void setScore(int score)
-    {
-        if (score<0)
+
+    public void setScore(int score) {
+        if (score < 0)
             throw new IllegalArgumentException("The score can not be a negative number");
         this.score = score;
     }
-    public void setPlayerID(UUID playerID)
-    {
+
+    public void setPlayerID(UUID playerID) {
         if (playerID == null)
             throw new IllegalArgumentException("The playerID can not be null");
-        this.playerID=playerID;
+        this.playerID = playerID;
     }
 
-    public void addWarning()
-    {
+    public void addWarning() {
         if (status != RunStatus.IN_PROGRESS)
             throw new IllegalStateException("The run is finished");
         warnings = warnings + 1;
@@ -84,12 +83,30 @@ public class Run {
             status = RunStatus.LOST;
         }
     }
+
     public void start() {
         day = 1;
         warnings = 0;
         score = 0;
         status = IN_PROGRESS;
         defeatCause = null;
+    }
+
+    public void lose(DefeatCause cause) {
+        if (status != IN_PROGRESS)
+            throw new IllegalStateException("the run is finished.");
+        if (cause == null)
+            throw new IllegalArgumentException("The cause can not be null");
+        if (cause == DefeatCause.EXPELLED)
+            throw new IllegalArgumentException("EXPELLED only happens after 3 warnings");
+        status = RunStatus.LOST;
+        defeatCause = cause;
+    }
+
+    public void abandon() {
+        if (status != IN_PROGRESS)
+            throw new IllegalStateException("The run is finished you can't abandon");
+        status = ABANDONED;
     }
 
 

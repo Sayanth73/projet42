@@ -10,7 +10,11 @@ public class LeaderBoard {
     private Map<UUID, Player> players;
 
     public LeaderBoard(List<Run> runs, Map<UUID, Player> players) {
-        this.runs = runs;
+        List<Run> runfinished = new ArrayList <>();;
+        for (int i = 0; i < runs.size(); i++)
+            if (runs.get(i).getStatus() != RunStatus.IN_PROGRESS)
+                runfinished.add(runs.get(i));
+        this.runs = runfinished;
         this.players = players;
     }
 
@@ -71,31 +75,6 @@ public class LeaderBoard {
         players.put(player2.getPlayerID(),player2);
         LeaderBoard leaderBoard2 = new LeaderBoard(leaderboard, players);
         List<Run> top2 = leaderBoard2.topByFaculty(Faculty.SSP, 3);
-
-        leaderBoard2.topByFaculty(HEC,3);
-        for (Run run : top2) {
-            System.out.println(run.getScore());
-        }
-        top2 = leaderBoard2.topByFaculty(Faculty.SSP, 3);
-        for (Run run : top2) {
-            System.out.println(run.getScore());
-        }
-        players.put(player2.getPlayerID(), player2);
-
-        System.out.println("--- Top HEC ---");
-        for (Run run : leaderBoard2.topByFaculty(Faculty.HEC, 3)) {
-            System.out.println(run.getScore());
-        }
-
-        System.out.println("--- Top SSP ---");
-        for (Run run : leaderBoard2.topByFaculty(Faculty.SSP, 3)) {
-            System.out.println(run.getScore());
-        }
-
-        System.out.println("--- Top global ---");
-        for (Run run : leaderBoard2.top(3)) {
-            System.out.println(run.getScore());
-        }
 
     }
 }

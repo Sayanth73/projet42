@@ -3,6 +3,8 @@ package unil.rush.state;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.ws.rs.WebApplicationException;
 import jakarta.ws.rs.core.Response;
+import unil.rush.domain.DefeatCause;
+import unil.rush.domain.LeaderBoard;
 import unil.rush.domain.Player;
 import unil.rush.domain.Run;
 
@@ -103,4 +105,29 @@ public class ApplicationState {
         test.addWarning();
         return (true);
     }
+
+    public LeaderBoard getLeaderboard() {
+        return (new LeaderBoard(getAllRuns(), players));
+    }
+
+    public boolean loseRun(UUID id, DefeatCause cause) {
+        if (runs.get(id) == null)
+            return false;
+        else {
+            runs.get(id).lose(cause);
+            return true;
+        }
+    }
+
+    public boolean abandonRun(UUID id) {
+        if (runs.get(id) == null)
+            return false;
+        else {
+            runs.get(id).abandon();
+            return true;
+        }
+    }
+
+
+
 }
