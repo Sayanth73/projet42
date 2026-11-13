@@ -1,0 +1,14 @@
+# 1. Add MySQL Connector JAR to the server classpath (if not already copied to domain lib)
+add-library --type=common /opt/payara/libs/mysql-connector-java-8.0.26.jar
+
+# 2. Create the JDBC Connection Pool
+create-jdbc-connection-pool --datasourceclassname com.mysql.cj.jdbc.MysqlDataSource --restype javax.sql.DataSource --property PortNumber=3306:ServerName=db:DatabaseName=studybuddy:User=buddy:Password=soar:useSSL=false:allowPublicKeyRetrieval=true:serverTimezone=UTC:zeroDateTimeBehavior=CONVERT_TO_NULL StudyBuddyPool
+
+# 3. Create the JNDI JDBC Resource bound to the pool
+create-jdbc-resource --connectionpoolid StudyBuddyPool jdbc/StudyBuddy
+
+# 4. (Optional) Ping the pool to verify connectivity on boot
+ping-connection-pool StudyBuddyPool
+
+# 5. Configure port for remote debugging
+set configs.config.server-config.java-config.debug-options=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:9009

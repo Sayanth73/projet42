@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9d857690-7d82-4a4d-89d2-74ebd36a37d3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../UnilRushService-old/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../UnilRushService-old/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../UnilRushService-old/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UnilRushService-old/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UnilRushService-old/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UnilRushService-old/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UnilRushService-old/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/unil/rush/external/Current.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UnilRushService-old/src/main/java/unil/rush/external/Current.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/unil/rush/external/OpenMeteoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UnilRushService-old/src/main/java/unil/rush/external/OpenMeteoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/unil/rush/external/WeatherClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UnilRushService-old/src/main/java/unil/rush/external/WeatherClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/unil/rush/rest/LeaderboardResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UnilRushService-old/src/main/java/unil/rush/rest/LeaderboardResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/unil/rush/rest/PlayerResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UnilRushService-old/src/main/java/unil/rush/rest/PlayerResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/unil/rush/rest/RunResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UnilRushService-old/src/main/java/unil/rush/rest/RunResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/unil/rush/rest/UnilRushService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UnilRushService-old/src/main/java/unil/rush/rest/UnilRushService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/unil/rush/rest/WeatherResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UnilRushService-old/src/main/java/unil/rush/rest/WeatherResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/unil/rush/state/ApplicationState.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UnilRushService-old/src/main/java/unil/rush/state/ApplicationState.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="3M3KanvfEA80aWnVBNvRkzrBOhL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9d857690-7d82-4a4d-89d2-74ebd36a37d3" name="Changes" comment="" />
+      <created>1794573881677</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1794573881677</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/unil/rush/rest/UnilRushService.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
